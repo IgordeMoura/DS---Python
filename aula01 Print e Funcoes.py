@@ -24,6 +24,12 @@
 # mensagem = "O curso de " + curso + " possui o valor de " + str(valor) + ", no ano de " + str(ano)
 # print(mensagem)
 
+
+# Format
+# print (f'Olá {nome}')
+# no caso utiliza-se f antes das aspas e puxamos a variavel utilizando chaves { }
+
+
 #_________________________________________________________________________________________________
 
 #                     Funções Matematicas
