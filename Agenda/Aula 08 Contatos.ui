@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QTableWidget" name="tabelaContatos">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -52,10 +52,10 @@
      </property>
     </column>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="Contantos">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>240</x>
       <y>-40</y>
       <width>221</width>
       <height>151</height>
@@ -70,7 +70,7 @@
      <string>Contantos</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnCadastro_2">
+   <widget class="QPushButton" name="btnGerarPDF">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -98,7 +98,7 @@
      <number>100</number>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnCadastro_3">
+   <widget class="QPushButton" name="btnAlterContato">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -126,7 +126,7 @@
      <number>100</number>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnCadastro_4">
+   <widget class="QPushButton" name="btnDeleteContato">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -154,7 +154,7 @@
      <number>100</number>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnCadastro_5">
+   <widget class="QPushButton" name="btnVoltar">
     <property name="geometry">
      <rect>
       <x>490</x>
