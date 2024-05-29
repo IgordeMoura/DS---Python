@@ -84,16 +84,70 @@ def excluirContato():
     valorId = contatos_lidos[linhaContato][0]
     cursor.execute("DELETE FROM contatos WHERE id=" + str(valorId))
     banco.commit()
+    
+# def abrirAlteração():
+#     EditContatos.show()
+    
+#     linhaContato = listarContatos.tabelaContatos.currentRow()
+#     cursor = banco.cursor()
+#     comando_SQL = "SELECT * FROM contatos"
+#     cursor.execute(comando_SQL)
+#     contatos_lidos = cursor.fetchall()
+#     valorId = contatos_lidos[linhaContato][0]
+#     valorNome = contatos_lidos[linhaContato][1]
+#     valorEmail = contatos_lidos[linhaContato][2]
+#     valorTelefone = contatos_lidos[linhaContato][3]
+#     valorTipoTelefone = contatos_lidos[linhaContato][4]
+    
+#     EditContatos.leID.text(valorId)
+#     EditContatos.leNome.text(valorNome)
+#     EditContatos.leEmail.text(valorEmail)
+#     EditContatos.leTelefone.text(valorTelefone)
+    
+#     if (valorTipoTelefone == 'Celular'):
+#         EditContatos.rbCelular.isChecked()
+        
+#     elif (valorTipoTelefone == 'Residencial'):
+#         EditContatos.rbResidencial.isChecked()
+    
 
+    
 app = QtWidgets.QApplication([])
 agenda=uic.loadUi('Aula 07 Agenda.ui')
 listarContatos = uic.loadUi('Aula 08 Contatos.ui')
+EditContatos = uic.loadUi('Aula 11 Alterar.ui')
+
 
 agenda.btnCadastro.clicked.connect(cadastrarContato)
 agenda.btnConsultar.clicked.connect(consultarContatos)
 
 listarContatos.btnGerarPDF.clicked.connect(gerarPDF)
 listarContatos.btnDeleteContato.clicked.connect(excluirContato)
+# listarContatos.btnAlterContato.clicked.connect(abrirAlteração)
 
 agenda.show()
 app.exec()
+
+
+
+# def alterarContato():
+#     campoNome= EditContatos.leNome.text()
+#     campoEmail= EditContatos.leEmail.text()
+#     campoTelefone= EditContatos.leTelefone.text()
+    
+#     if EditContatos.rbResidencial.isChecked():
+#         tipoTelefone="Residencial"
+        
+#     elif EditContatos.rbCelular.isChecked():
+#         tipoTelefone="Celular"
+        
+#     else:
+#         tipoTelefone="Não Informado"
+    
+#     linhaContato = listarContatos.tabelaContatos.currentRow()
+#     cursor = banco.cursor()
+#     contatos_lidos = cursor.fetchall()
+#     valorId = contatos_lidos[linhaContato][0]
+#     comando_SQL = cursor.execute("UPDATE (nome, email, telefone, tipoTelefone) values (%s, %s, %s, %s) FROM contatos WHERE id=" + str(valorId))
+#     dados = (str(campoNome), str(campoEmail), str(campoTelefone), tipoTelefone)
+#     cursor.execute(comando_SQL,dados)    
